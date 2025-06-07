@@ -2,10 +2,10 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="text-center mb-6">
-      <h1 className="text-5xl font-bold text-blue-700 mb-3">Creative Agency</h1>
-      <p className="text-xl text-gray-500">Showcasing Our Work</p>
-    </header>
+    <div className="text-center space-y-2">
+      <h1 className="text-3xl font-bold text-blue-700">Creative Agency</h1>
+      <p className="text-gray-500">Showcasing Our Work</p>
+    </div>
   );
 }
 

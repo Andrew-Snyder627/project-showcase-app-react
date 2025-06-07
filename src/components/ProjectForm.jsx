@@ -16,32 +16,38 @@ function ProjectForm({ onAddProject }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="flex flex-col gap-1">
+        <label className="font-semibold text-gray-700">Project Title</label>
         <input
           type="text"
-          placeholder="Project Title"
+          placeholder="Enter title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full border border-blue-300 rounded-full px-6 py-4 shadow-md focus:outline-none focus:ring-4 focus:ring-blue-400 bg-white text-gray-800 placeholder-gray-400"
+          className="border border-blue-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
         />
       </div>
-      <div>
+
+      <div className="flex flex-col gap-1">
+        <label className="font-semibold text-gray-700">
+          Project Description
+        </label>
         <textarea
-          placeholder="Project Description"
+          placeholder="Enter description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="w-full border border-blue-300 rounded-3xl px-6 py-4 shadow-md focus:outline-none focus:ring-4 focus:ring-blue-400 bg-white text-gray-800 placeholder-gray-400"
+          className="border border-blue-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
         ></textarea>
       </div>
+
       <button
         type="submit"
         disabled={!title || !description}
-        className={`${
+        className={`w-full ${
           !title || !description
             ? "bg-blue-300 cursor-not-allowed"
             : "bg-blue-500 hover:bg-blue-600"
-        } text-white font-semibold py-4 px-8 rounded-full transition shadow-lg`}
+        } text-white font-semibold py-3 px-6 rounded-lg shadow-md transition`}
       >
         Add Project
       </button>

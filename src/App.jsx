@@ -24,8 +24,8 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-100 via-blue-200 to-blue-300 flex justify-center items-center py-20 px-4">
-      <div className="w-full max-w-3xl bg-white bg-opacity-90 backdrop-blur-lg shadow-2xl rounded-3xl p-10 space-y-10">
+    <div className="min-h-screen bg-[#eef3fb] flex justify-center items-center py-16 px-4">
+      <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8 space-y-8 border border-blue-100">
         <Header />
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <ProjectForm onAddProject={handleAddProject} />

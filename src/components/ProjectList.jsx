@@ -3,11 +3,9 @@ import ProjectCard from "./ProjectCard";
 
 function ProjectList({ projects, handleDelete }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="space-y-4">
       {projects.length === 0 ? (
-        <p className="text-center text-gray-500 col-span-full">
-          No projects to display.
-        </p>
+        <p className="text-center text-gray-500">No projects to display.</p>
       ) : (
         projects.map((project, index) => (
           <ProjectCard
