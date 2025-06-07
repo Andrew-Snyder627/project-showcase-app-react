@@ -24,11 +24,11 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#eef3fb] flex justify-center items-center py-16 px-4">
-      <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8 space-y-8 border border-blue-100">
+    <div className="min-h-screen bg-gray-100 flex justify-center items-center p-6">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-[400px] space-y-6">
         <Header />
-        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <ProjectForm onAddProject={handleAddProject} />
+        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <ProjectList
           projects={filteredProjects}
           handleDelete={handleDeleteProject}

@@ -2,18 +2,17 @@ import React from "react";
 
 function ProjectCard({ project, onDelete }) {
   return (
-    <div className="border border-blue-100 rounded-xl p-5 shadow bg-white hover:shadow-lg transition-all duration-200">
-      <h3 className="text-lg font-semibold text-blue-700 mb-2">
-        {project.title}
-      </h3>
-      <p className="text-gray-600">{project.description}</p>
-      <div className="flex justify-end mt-4">
-        <button
-          onClick={onDelete}
-          className="bg-red-500 text-white px-3 py-1 rounded-md text-sm hover:bg-red-600 transition"
-        >
-          Delete
-        </button>
+    <div className="flex items-center gap-4 border border-gray-300 p-4 rounded-md bg-gray-50">
+      <button
+        onClick={onDelete}
+        className="border border-gray-400 rounded-md px-4 py-2 text-lg font-bold"
+      >
+        X
+      </button>
+
+      <div>
+        <h3 className="font-bold">{project.title}</h3>
+        <p className="text-sm text-gray-600">{project.description}</p>
       </div>
     </div>
   );

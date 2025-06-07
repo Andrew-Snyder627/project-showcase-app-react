@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 function ProjectList({ projects, handleDelete }) {
   return (
-    <div className="space-y-4">
+    <div className="bg-white p-6 rounded-lg border space-y-4 w-full">
       {projects.length === 0 ? (
         <p className="text-center text-gray-500">No projects to display.</p>
       ) : (
